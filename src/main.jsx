@@ -67,12 +67,19 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<MenuDocument />} />
-
         <Route
           path="/account"
           element={
             <UserRoute>
               <Account />
+            </UserRoute>
+          }
+        />
+        <Route
+          path="/writereview"
+          element={
+            <UserRoute>
+              <WriteReview />
             </UserRoute>
           }
         />

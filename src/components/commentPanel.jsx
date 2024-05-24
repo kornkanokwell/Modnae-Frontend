@@ -3,6 +3,7 @@ import "../app/topic.css";
 import moderr from "../assets/moderror.png";
 import modnoi from "../assets/mod.png";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { FaCommentAlt } from "react-icons/fa";
 import { TbSend } from "react-icons/tb";
 import { useSelector } from "react-redux";
@@ -14,6 +15,7 @@ export function CommentPanel() {
   const [opened, setOpened] = useState({});
   const [comments, setComments] = useState([]);
   const [active, setActive] = useState(false);
+  const navigate = useNavigate();
   const toggleButton = (index) => {
     setOpened((prevOpened) => ({
       ...prevOpened,
@@ -75,11 +77,13 @@ export function CommentPanel() {
 
   const submitComment = async (e, topicId) => {
     const commentContent = e.target.comment.value;
-    if (commentContent.length <= 0) {
-      setActive(false);
-    } else {
+    if (commentContent.length > 0) {
       setActive(true);
       try {
+        if (!user.email) {
+          alert("กรุณาเข้าสู่ระบบ");
+          navigate("/login");
+        }
         const response = await axios.post(
           `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
           {
@@ -92,10 +96,16 @@ export function CommentPanel() {
       } catch (error) {
         console.error("Error adding comment:", error);
       }
+    } else {
+      setActive(false);
     }
   };
 
   const handleLike = async (topicId) => {
+    if (!user.email) {
+      alert("กรุณาเข้าสู่ระบบ");
+      navigate("/login");
+    }
     try {
       const response = await axios.post(
         `https://modnae-m7lm.onrender.com/Topic/like/${topicId}`,
@@ -234,8 +244,7 @@ export function CommentPanel() {
                           />
                           {active === true ? (
                             <button type="submit" className="send-comment-btn">
-                              {/* <TbSend className="send-comment-btn-icon" /> */}
-                              ส่ง
+                              <TbSend className="send-comment-btn-icon" />
                             </button>
                           ) : (
                             <button
@@ -243,8 +252,7 @@ export function CommentPanel() {
                               disabled
                               className="send-comment-btn"
                             >
-                              {/* <TbSend className="send-comment-btn-icon" /> */}
-                              ส่ง
+                              <TbSend className="send-comment-btn-icon" />
                             </button>
                           )}
                         </div>

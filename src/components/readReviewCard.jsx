@@ -42,7 +42,7 @@ function ReviewCard({
       })
       .catch((error) => console.error("Error liking review:", error));
     if (!userEmail) {
-      alert("please login");
+      alert("กรุณาเข้าสู่ระบบ");
       navigate("/login");
     }
   };
