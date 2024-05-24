@@ -14,7 +14,6 @@ export function CommentPanel() {
   const [topics, setTopics] = useState([]);
   const [opened, setOpened] = useState({});
   const [comments, setComments] = useState([]);
-  const [active, setActive] = useState(false);
   const navigate = useNavigate();
   const toggleButton = (index) => {
     setOpened((prevOpened) => ({
@@ -60,9 +59,6 @@ export function CommentPanel() {
       }
     };
     fetchData();
-    // if (user.email) {
-    //
-    // }
   }, [user.email]);
 
   const thaiDateTimeOptions = {
@@ -76,28 +72,22 @@ export function CommentPanel() {
   };
 
   const submitComment = async (e, topicId) => {
-    const commentContent = e.target.comment.value;
-    if (commentContent) {
-      setActive(true);
-      try {
-        if (!user.email) {
-          alert("กรุณาเข้าสู่ระบบ");
-          navigate("/login");
-        }
-        const response = await axios.post(
-          `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
-          {
-            email: user.email,
-            content: commentContent,
-          }
-        );
-
-        setComments([...comments, response.data.comments[0]]);
-      } catch (error) {
-        console.error("Error adding comment:", error);
+    try {
+      if (!user.email) {
+        alert("กรุณาเข้าสู่ระบบ");
+        navigate("/login");
       }
-    } else {
-      setActive(false);
+      const response = await axios.post(
+        `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
+        {
+          email: user.email,
+          content: commentContent,
+        }
+      );
+
+      setComments([...comments, response.data.comments[0]]);
+    } catch (error) {
+      console.error("Error adding comment:", error);
     }
   };
 
@@ -242,19 +232,10 @@ export function CommentPanel() {
                             className="comment-field"
                             name="comment"
                           />
-                          {active? (
-                            <button type="submit" className="send-comment-btn">
-                              <TbSend className="send-comment-btn-icon" />
-                            </button>
-                          ) : (
-                            <button
-                              type="submit"
-                              disabled
-                              className="send-comment-btn"
-                            >
-                              <TbSend className="send-comment-btn-icon" />
-                            </button>
-                          )}
+
+                          <button type="submit" className="send-comment-btn">
+                            <TbSend className="send-comment-btn-icon" />
+                          </button>
                         </div>
                       </div>
                     </form>
