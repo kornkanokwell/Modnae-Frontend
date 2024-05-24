@@ -57,10 +57,10 @@ export function CommentPanel() {
         console.error("Error fetching data:", error);
       }
     };
-
-    if (user.email) {
-      fetchData();
-    }
+    fetchData();
+    // if (user.email) {
+    //
+    // }
   }, [user.email]);
 
   const thaiDateTimeOptions = {
