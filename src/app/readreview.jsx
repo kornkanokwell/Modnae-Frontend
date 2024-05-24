@@ -55,6 +55,7 @@ export function ReadReview() {
           {reviews.length > 0 ? (
             <div>
               {reviews.map((review, index) => {
+                const userRole = review.userId ? review.userId.role : "unknown";
                 return (
                   <ReviewCard
                     key={index}
@@ -63,7 +64,7 @@ export function ReadReview() {
                     teacher={review.teacher}
                     description={review.descriptions}
                     selectedSubject={selectedSubject}
-                    id={review.userId.role}
+                    id={userRole}
                     reviewId={review._id}
                     initialLikes={review.likes}
                     userEmail={user.email}
