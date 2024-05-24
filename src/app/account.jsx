@@ -47,7 +47,7 @@ export const Account = () => {
     });
     navigate("/login");
   };
-  console.log("account user", user);
+  // console.log("account user", user);
   return (
     <>
       <nav>

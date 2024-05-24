@@ -11,7 +11,7 @@ function ReviewCard({
   teacher,
   description,
   selectedSubject,
-  id,
+  role,
   reviewId,
   initialLikes,
   userEmail,
@@ -49,7 +49,7 @@ function ReviewCard({
 
   return (
     <div className="readreview-wrapper">
-      {id === "teacher" ? (
+      {role === "teacher" ? (
         <div className="review-container gold-frame">
           <div className="row between">
             <div className="identify-res">

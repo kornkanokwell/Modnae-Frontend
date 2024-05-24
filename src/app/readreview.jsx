@@ -10,7 +10,7 @@ import axios from "axios";
 const getUser = (state) => ({ ...state.user });
 export function ReadReview() {
   const user = useSelector(getUser);
-  console.log("review user", user);
+  // console.log("review user", user);
   const [selectedSubject, setSelectedSubject] = useState("");
   const [reviews, setReviews] = useState([]);
 
@@ -65,7 +65,7 @@ export function ReadReview() {
                     teacher={review.teacher}
                     description={review.descriptions}
                     selectedSubject={selectedSubject}
-                    id={userRole}
+                    role={userRole}
                     reviewId={review._id}
                     initialLikes={review.likes}
                     userEmail={user.email}
