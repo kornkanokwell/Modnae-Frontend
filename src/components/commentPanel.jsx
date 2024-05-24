@@ -73,11 +73,11 @@ export function CommentPanel() {
 
   const submitComment = async (e, topicId) => {
     const commentContent = e.target.comment.value;
+    if (!user.email) {
+      alert("กรุณาเข้าสู่ระบบ");
+      navigate("/login");
+    }
     try {
-      if (!user.email) {
-        alert("กรุณาเข้าสู่ระบบ");
-        navigate("/login");
-      }
       const response = await axios.post(
         `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
         {
