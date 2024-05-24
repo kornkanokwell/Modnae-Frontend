@@ -16,11 +16,7 @@ function toggleTopic() {
     hideBtn.style.display = "block";
   }
 }
-function goLogin() {
-  const navigate = useNavigate();
-  alert("กรุณาเข้าสู่ระบบ");
-  navigate("/login");
-}
+
 export const TopicPanel = () => {
   const user = useSelector(getUser);
   const navigate = useNavigate();
@@ -62,6 +58,10 @@ export const TopicPanel = () => {
           console.error(error);
         });
     }
+  }
+  function goLogin() {
+    alert("กรุณาเข้าสู่ระบบ");
+    navigate("/login");
   }
   return (
     <>

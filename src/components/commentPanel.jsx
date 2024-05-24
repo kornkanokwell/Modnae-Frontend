@@ -242,7 +242,7 @@ export function CommentPanel() {
                             className="comment-field"
                             name="comment"
                           />
-                          {active === true ? (
+                          {active? (
                             <button type="submit" className="send-comment-btn">
                               <TbSend className="send-comment-btn-icon" />
                             </button>
