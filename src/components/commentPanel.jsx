@@ -72,6 +72,7 @@ export function CommentPanel() {
   };
 
   const submitComment = async (e, topicId) => {
+    const commentContent = e.target.comment.value;
     try {
       if (!user.email) {
         alert("กรุณาเข้าสู่ระบบ");
