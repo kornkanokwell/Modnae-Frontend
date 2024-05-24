@@ -13,6 +13,7 @@ export function CommentPanel() {
   const [topics, setTopics] = useState([]);
   const [opened, setOpened] = useState({});
   const [comments, setComments] = useState([]);
+  const [active, setActive] = useState(false);
   const toggleButton = (index) => {
     setOpened((prevOpened) => ({
       ...prevOpened,
@@ -74,19 +75,23 @@ export function CommentPanel() {
 
   const submitComment = async (e, topicId) => {
     const commentContent = e.target.comment.value;
+    if (commentContent.length <= 0) {
+      setActive(false);
+    } else {
+      setActive(true);
+      try {
+        const response = await axios.post(
+          `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
+          {
+            email: user.email,
+            content: commentContent,
+          }
+        );
 
-    try {
-      const response = await axios.post(
-        `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
-        {
-          email: user.email,
-          content: commentContent,
-        }
-      );
-
-      setComments([...comments, response.data.comments[0]]);
-    } catch (error) {
-      console.error("Error adding comment:", error);
+        setComments([...comments, response.data.comments[0]]);
+      } catch (error) {
+        console.error("Error adding comment:", error);
+      }
     }
   };
 
@@ -227,9 +232,15 @@ export function CommentPanel() {
                             className="comment-field"
                             name="comment"
                           />
-                          <button type="submit" className="send-comment-btn">
-                            <TbSend className="send-comment-btn-icon" />
-                          </button>
+                          {active === true ? (
+                            <button type="submit" className="send-comment-btn">
+                              <TbSend className="send-comment-btn-icon" />
+                            </button>
+                          ) : (
+                            <button type="submit" disabled className="send-comment-btn">
+                              <TbSend className="send-comment-btn-icon" />
+                            </button>
+                          )}
                         </div>
                       </div>
                     </form>
