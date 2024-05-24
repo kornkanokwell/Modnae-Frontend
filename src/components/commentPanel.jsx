@@ -77,7 +77,7 @@ export function CommentPanel() {
 
   const submitComment = async (e, topicId) => {
     const commentContent = e.target.comment.value;
-    if (commentContent.length > 0) {
+    if (commentContent) {
       setActive(true);
       try {
         if (!user.email) {

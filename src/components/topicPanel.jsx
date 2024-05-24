@@ -16,6 +16,11 @@ function toggleTopic() {
     hideBtn.style.display = "block";
   }
 }
+function goLogin() {
+  const navigate = useNavigate();
+  alert("กรุณาเข้าสู่ระบบ");
+  navigate("/login");
+}
 export const TopicPanel = () => {
   const user = useSelector(getUser);
   const navigate = useNavigate();
@@ -60,11 +65,19 @@ export const TopicPanel = () => {
   }
   return (
     <>
-      <div className=" flex center mb-1">
-        <button id="hideBtn" className="topic-post-btn" onClick={toggleTopic}>
-          + ตั้งกระทู้
-        </button>
-      </div>
+      {user.email ? (
+        <div className=" flex center mb-1">
+          <button id="hideBtn" className="topic-post-btn" onClick={toggleTopic}>
+            + ตั้งกระทู้
+          </button>
+        </div>
+      ) : (
+        <div className=" flex center mb-1">
+          <button id="hideBtn" className="topic-post-btn" onClick={goLogin}>
+            + ตั้งกระทู้
+          </button>
+        </div>
+      )}
 
       <div
         className="topic-panel mb-1"
