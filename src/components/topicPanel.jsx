@@ -1,8 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "../app/topic.css";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "../app/topic.css";
 const getUser = (state) => ({ ...state.user });
 function toggleTopic() {
   const topicBtn = document.getElementById("topic");
@@ -17,6 +18,7 @@ function toggleTopic() {
 }
 export const TopicPanel = () => {
   const user = useSelector(getUser);
+  const navigate = useNavigate();
   const [count, setCount] = useState(0);
   const [input, setInput] = useState({
     title: "",
@@ -38,18 +40,23 @@ export const TopicPanel = () => {
   }
 
   function handleClick(event) {
-    axios
-      .post("https://modnae-m7lm.onrender.com/Topic", {
-        email: user.email,
-        title: input.title,
-        descriptions: input.description,
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (!user.email) {
+      alert("กรุณาเข้าสู่ระบบ");
+      navigate("/login");
+    } else {
+      axios
+        .post("https://modnae-m7lm.onrender.com/Topic", {
+          email: user.email,
+          title: input.title,
+          descriptions: input.description,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   }
   return (
     <>
