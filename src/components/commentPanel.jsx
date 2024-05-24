@@ -234,11 +234,17 @@ export function CommentPanel() {
                           />
                           {active === true ? (
                             <button type="submit" className="send-comment-btn">
-                              <TbSend className="send-comment-btn-icon" />
+                              {/* <TbSend className="send-comment-btn-icon" /> */}
+                              ส่ง
                             </button>
                           ) : (
-                            <button type="submit" disabled className="send-comment-btn">
-                              <TbSend className="send-comment-btn-icon" />
+                            <button
+                              type="submit"
+                              disabled
+                              className="send-comment-btn"
+                            >
+                              {/* <TbSend className="send-comment-btn-icon" /> */}
+                              ส่ง
                             </button>
                           )}
                         </div>
