@@ -1,0 +1,188 @@
+.none {
+  display: none;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.topic-header {
+  margin-top: 40px;
+}
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  align-items: center;
+  flex-direction: column;
+}
+.topic-wrapper {
+  width: 80%;
+}
+.topic-post-btn {
+  background-color: #81bfa1;
+  color: white;
+  border: none;
+  width: 85vw;
+  border-radius: 0.5rem;
+  padding: 0.7rem 2rem;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.topic-post-btn:hover {
+  background-color: #548a60;
+}
+.topic-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff7dc;
+  border-radius: 10px;
+}
+.topic-panel {
+  transition: transform 1s;
+}
+.w-80vw {
+  width: 80vw;
+}
+.px-2-py-2 {
+  padding: 2rem 2rem;
+}
+
+.mb-1 {
+  margin: 0px 0px 1rem 0px;
+}
+.mb-05 {
+  margin: 0px 0px 0.5rem 0px;
+}
+.mt-1 {
+  margin: 1rem 0px 0px 0px;
+}
+.ml-05 {
+  margin: 0 0 0 0.5rem;
+}
+.ml-05-mt-1 {
+  margin: 1rem 0 0 0.5rem;
+}
+.flex-start {
+  justify-content: start;
+}
+.ml-3 {
+  margin: 0 0 0 3rem;
+}
+/* p {
+  padding: 0;
+  margin: 0;
+} */
+.red {
+  color: red;
+}
+.sm-text {
+  font-size: 14px;
+  margin: 0;
+}
+.topic-question {
+  padding: 0;
+  margin: 0rem 0 0.5rem 0;
+  color: #a63d17;
+}
+.user-comment {
+  padding: 0;
+  margin: 0rem 0 1rem 0;
+}
+.question-input {
+  width: 100%;
+  height: 3rem;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  border: none;
+  background-color: #d9d9d9;
+  font-size: 16px;
+  resize: none;
+}
+.text-sm {
+  font-size: 0.7em;
+  padding: 0px;
+  margin: 0px;
+}
+.text-gray {
+  padding-left: 7px;
+  color: #36454f;
+}
+.gap-3 {
+  display: flex;
+  gap: 3px;
+}
+.h-1-w-1 {
+  height: 1.5em;
+  width: 1.5em;
+}
+.comment-btn {
+  display: flex;
+  background-color: transparent;
+  border-color: none;
+  border: none;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.comment-btn-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.comment-field {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  width: 100%;
+  height: 3rem;
+  box-sizing: border-box;
+  background-color: white;
+  font-size: 15px;
+  resize: none;
+}
+
+.send-comment-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.send-comment-btn-icon {
+  width: 2rem;
+  height: 1.5rem;
+  padding: 0.12rem;
+}
+.send-comment-btn-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.modProfile {
+  width: 2rem;
+  padding: 0.3rem;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+}
+
+.align-center {
+  align-items: center;
+}

@@ -1,0 +1,34 @@
+.syllabus-header-c {
+  width: 85vw;
+  margin-top: 1rem;
+}
+.select-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.select-button select {
+  margin-left: 10px;
+  height: 25px;
+  width: 5rem;
+  background-color: #d9d9d9;
+  border-radius: 6px;
+  border: none;
+  padding: 0.3rem;
+}
+@media screen and (max-width: 850px) {
+  .select-button {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  .select-button select {
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    margin-right: 10px;
+  }
+}
+.pdf-iframe {
+  margin: 2rem 0;
+}

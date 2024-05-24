@@ -1,0 +1,38 @@
+.syllabus-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  align-items: center;
+  flex-direction: column;
+}
+.syllabus-header {
+  width: 85vw;
+  margin-top: 40px;
+}
+.syllabus-header hr {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.syllabus-content {
+  background-color: #fff7dc;
+  border-radius: 10px;
+  width: 85vw;
+  min-height: 480px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.syllabus-subcontent {
+  width: 100%;
+}
+
+.frame-subcontent {
+  margin: 40px;
+}
+@media screen and (max-width: 600px) {
+  .syllabus-content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

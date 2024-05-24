@@ -1,0 +1,18 @@
+.send-btn {
+  background-color: #81bfa1;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 2rem;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.send-btn:hover {
+  background-color: #548a60;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

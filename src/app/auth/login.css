@@ -1,0 +1,260 @@
+html {
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+.loginCenter {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: #fffbf1;
+}
+.loginCenterRegister {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: #fffbf1;
+}
+.loginContent {
+  background-color: white;
+  margin-top: 100px;
+  width: 900px;
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.loginContentRegister {
+  background-color: white;
+  margin-top: 50px;
+  width: 900px;
+  height: 600px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.loginPicture,
+.registerPicture {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  background-color: #fff7dc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.loginPicture img {
+  height: 80%;
+}
+.registerPicture img {
+  height: 80%;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  justify-content: center;
+}
+.headRegister {
+  margin: 40px 240px 40px 0px;
+}
+.headLogin {
+  margin: 40px 240px 40px 0px;
+}
+.loginMain {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.loginInput {
+  border: none;
+  border-bottom: 2px solid lightgray;
+  outline: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 270px;
+}
+.inputName {
+  border: none;
+  border-bottom: 2px solid lightgray;
+  outline: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 90px;
+}
+.inputLast {
+  border: none;
+  border-bottom: 2px solid lightgray;
+  outline: none;
+  padding: 10px 0px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  width: 170px;
+}
+.inputContainer {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 350px;
+}
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 18px;
+}
+.inputIconUser {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 15px;
+}
+.loginInput:focus,
+.inputLast:focus,
+.inputName:focus {
+  border-bottom: 2px solid black;
+}
+.toRegister {
+  color: #e39926;
+  padding-bottom: 2rem;
+}
+.toRegister:hover {
+  transition: 1s;
+  text-decoration: underline wavy #e39926;
+  text-underline-offset: 30%;
+}
+.loginButton {
+  color: white;
+  background-color: #ecb96a;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 1rem;
+}
+.loginButton:hover {
+  background-color: #e39926;
+  transition: 0.2s;
+}
+.allName {
+  display: flex;
+  width: 350px;
+}
+.inputContainerName {
+  display: flex;
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 150px;
+}
+.inputContainerLast {
+  display: flex;
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 150px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .loginPicture,
+  .registerPicture {
+    display: none;
+  }
+
+  .loginCenterRegister {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fffbf1;
+  }
+  .loginCenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fffbf1;
+  }
+  .loginContent {
+    background-color: white;
+    margin-top: 100px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  .loginContentRegister {
+    background-color: white;
+    margin-top: 100px;
+    width: 90%;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .loginInput {
+    border: none;
+    border-bottom: 2px solid lightgray;
+    outline: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 60%;
+  }
+  .inputContainer {
+    margin: 0 20px 25px 20px;
+    width: auto;
+  }
+  .headLogin,
+  .headRegister {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+  }
+  .loginForm {
+    width: auto;
+  }
+  .loginMain {
+    width: 100%;
+    justify-content: center;
+  }
+  .allName {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 25px 20px;
+    width: auto;
+  }
+  .inputContainerName {
+    margin: 0 20px 25px 20px;
+    width: auto;
+  }
+  .inputContainerLast {
+    margin: 0 20px 0px 20px;
+    width: auto;
+  }
+  .inputName {
+    transition: border-color 0.3s;
+    width: 60%;
+  }
+  .inputLast {
+    transition: border-color 0.3s;
+    width: 60%;
+    padding: 10px 40px;
+  }
+}

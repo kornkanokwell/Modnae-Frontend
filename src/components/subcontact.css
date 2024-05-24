@@ -1,0 +1,16 @@
+.sub-contact {
+  cursor: pointer;
+}
+.sub-contact.active {
+  background-color: #ecb96a;
+  border-radius: 13px;
+  margin: 10px;
+}
+.select-contact-option {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
