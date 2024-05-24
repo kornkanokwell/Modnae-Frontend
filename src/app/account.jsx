@@ -39,7 +39,7 @@ export const Account = () => {
       setLog("รหัสผ่านใหม่ไม่ตรงกัน");
     }
   };
-  console.log(user);
+
   const logout = () => {
     dispatch({
       type: "LOGOUT",
@@ -47,7 +47,7 @@ export const Account = () => {
     });
     navigate("/login");
   };
-  console.log("user", user);
+  console.log("account user", user);
   return (
     <>
       <nav>
