@@ -137,13 +137,13 @@ export function WriteReview() {
                         ดร.พรรณราย ศิริเจริญ
                       </option>
                       <option value="อาจารย์วิริยะ ไตรปัญญาศาสตร์">
-                      อาจารย์วิริยะ ไตรปัญญาศาสตร์
+                        อาจารย์วิริยะ ไตรปัญญาศาสตร์
                       </option>
                       <option value="รศ.ดร.วรสิทธิ์ ชูชัยวัฒนา">
-                      รศ.ดร.วรสิทธิ์ ชูชัยวัฒนา
+                        รศ.ดร.วรสิทธิ์ ชูชัยวัฒนา
                       </option>
                       <option value="พ.ต.ท.วงศ์ยศ เกิดศรี">
-                        ดร.ฐิตาภรณ์ กนกรัตน
+                        พ.ต.ท.วงศ์ยศ เกิดศรี
                       </option>
                       <option value="Dummy teacher">Dummy teacher</option>
                     </select>
