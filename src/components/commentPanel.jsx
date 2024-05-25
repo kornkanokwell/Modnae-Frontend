@@ -250,7 +250,6 @@ export function CommentPanel() {
                           />
 
                           <button type="submit" className="send-comment-btn">
-                            <TbSend className="send-comment-btn-icon" />
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
