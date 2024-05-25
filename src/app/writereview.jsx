@@ -38,6 +38,7 @@ export function WriteReview() {
 
   function handleClick(event) {
     event.preventDefault();
+
     axios
       .post("https://modnae-m7lm.onrender.com/WriteReview", {
         email: user.email,
@@ -47,7 +48,7 @@ export function WriteReview() {
         descriptions: input.descriptions,
       })
       .then((response) => {
-        window.location.href = '/readreview'
+        window.location.href = "/readreview";
         console.log(response.data);
       })
       .catch((error) => {

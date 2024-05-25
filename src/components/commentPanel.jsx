@@ -4,8 +4,6 @@ import moderr from "../assets/moderror.png";
 import modnoi from "../assets/mod.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { FaCommentAlt } from "react-icons/fa";
-import { TbSend } from "react-icons/tb";
 import { useSelector } from "react-redux";
 const getUser = (state) => ({ ...state.user });
 
@@ -72,12 +70,12 @@ export function CommentPanel() {
   };
 
   const submitComment = async (e, topicId) => {
-    e.preventDefault();
-    const commentContent = e.target.comment.value;
     if (!user.email) {
       alert("กรุณาเข้าสู่ระบบ");
       navigate("/login");
     }
+    e.preventDefault();
+    const commentContent = e.target.comment.value;
     try {
       const response = await axios.post(
         `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
@@ -232,42 +230,46 @@ export function CommentPanel() {
                         </div>
                       </div>
                     ))}
-                    <form onSubmit={(e) => submitComment(e, topic._id)}>
-                      <div>
-                        <div className="flex-row ">
-                          <img src={modnoi} className="modProfile" />
-                          <div>
-                            <label className="ml-05">แสดงความคิดเห็น</label>
+                    {user.email ? (
+                      <form onSubmit={(e) => submitComment(e, topic._id)}>
+                        <div>
+                          <div className="flex-row ">
+                            <img src={modnoi} className="modProfile" />
+                            <div>
+                              <label className="ml-05">แสดงความคิดเห็น</label>
+                            </div>
+                          </div>
+                          <div className="align-center mt-1 ml-3">
+                            <textarea
+                              type="text"
+                              placeholder="แสดงความคิดเห็น"
+                              className="comment-field"
+                              name="comment"
+                              id="user_input"
+                            />
+
+                            <button type="submit" className="send-comment-btn">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="#151515"
+                                className="send-comment-btn-icon z-10"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                                />
+                              </svg>
+                            </button>
                           </div>
                         </div>
-                        <div className="align-center mt-1 ml-3">
-                          <textarea
-                            type="text"
-                            placeholder="แสดงความคิดเห็น"
-                            className="comment-field"
-                            name="comment"
-                            id="user_input"
-                          />
-
-                          <button type="submit" className="send-comment-btn">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth={1.5}
-                              stroke="#151515"
-                              className="send-comment-btn-icon z-10"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
+                      </form>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 )}
               </div>

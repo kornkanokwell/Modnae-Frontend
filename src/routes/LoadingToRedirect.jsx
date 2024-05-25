@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function LoadingToRedirect() {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(3);
   const navigate = useNavigate();
   useEffect(() => {
     const interval = setInterval(() => {
