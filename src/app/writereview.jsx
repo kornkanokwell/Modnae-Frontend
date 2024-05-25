@@ -110,7 +110,6 @@ export function WriteReview() {
                       onChange={handleChange}
                       value={input.teacher}
                       required
-                      placeholder="กรุณาระบุผู้สอน"
                     >
                       <option value="Dummy teacher">Dummy teacher</option>
                       <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
