@@ -87,7 +87,7 @@
   height: 1.3em;
 }
 .z-10 {
-  z-index: 10;
+  z-index: 99;
 }
 .red {
   color: red;

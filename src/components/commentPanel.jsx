@@ -255,7 +255,7 @@ export function CommentPanel() {
                               fill="none"
                               viewBox="0 0 24 24"
                               strokeWidth={1.5}
-                              stroke="currentColor"
+                              stroke="#151515"
                               className="send-comment-btn-icon z-10"
                             >
                               <path
