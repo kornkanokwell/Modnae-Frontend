@@ -110,7 +110,9 @@ export function WriteReview() {
                       onChange={handleChange}
                       value={input.teacher}
                       required
+                      defaultChecked="Dummy teacher"
                     >
+                      <option value="Dummy teacher">Dummy teacher</option>
                       <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
                         ผศ.ดร.วิบูลศักดิ์ วัฒายุ
                       </option>
@@ -142,7 +144,6 @@ export function WriteReview() {
                       <option value="พ.ต.ท.วงศ์ยศ เกิดศรี">
                         พ.ต.ท.วงศ์ยศ เกิดศรี
                       </option>
-                      <option value="Dummy teacher">Dummy teacher</option>
                     </select>
                   </span>
                 </p>
