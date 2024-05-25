@@ -108,26 +108,32 @@ export function WriteReview() {
                       className="subject-name"
                       name="teacher"
                       onChange={handleChange}
+                      value={input.teacher}
                       required
-                      defaultChecked=""
                     >
                       <option value="none" selected disabled hidden>
                         กรุณาระบุผู้สอน
                       </option>
-                      <option value={input.teacher}>
+                      <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
                         ผศ.ดร.วิบูลศักดิ์ วัฒายุ
                       </option>
-                      <option value={input.teacher}>ดร.ศุวิล ชมชัยยา</option>
-                      <option value={input.teacher}>
+                      <option value="ดร.ศุวิล ชมชัยยา">ดร.ศุวิล ชมชัยยา</option>
+                      <option value="รศ.ชูเกียรติ วรสุชีพ">
                         รศ.ชูเกียรติ วรสุชีพ
                       </option>
-                      <option value={input.teacher}>
+                      <option value="ดร.วรินทร์ วัฒนพรพรหม">
                         ดร.วรินทร์ วัฒนพรพรหม
                       </option>
-                      <option value={input.teacher}>ดร.ปริเวท วรรณโกวิท</option>
-                      <option value={input.teacher}>ดร.วิธวินท์ สุสุทธิ</option>
-                      <option value={input.teacher}>ดร.ฐิตาภรณ์ กนกรัตน</option>
-                      <option value={input.teacher}>Dummy teacher</option>
+                      <option value="ดร.ปริเวท วรรณโกวิท">
+                        ดร.ปริเวท วรรณโกวิท
+                      </option>
+                      <option value="ดร.วิธวินท์ สุสุทธิ">
+                        ดร.วิธวินท์ สุสุทธิ
+                      </option>
+                      <option value="ดร.ฐิตาภรณ์ กนกรัตน">
+                        ดร.ฐิตาภรณ์ กนกรัตน
+                      </option>
+                      <option value="Dummy teacher">Dummy teacher</option>
                     </select>
                   </span>
                 </p>
