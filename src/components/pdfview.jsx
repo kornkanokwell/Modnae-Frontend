@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./pdf.css";
 export function PDFViewer({ initialSrc }) {
   const [src, setSrc] = useState(initialSrc);
 
@@ -9,7 +9,7 @@ export function PDFViewer({ initialSrc }) {
 
   return (
     <>
-      <iframe src={src} width="90%" height="100%"></iframe>
+      <iframe src={src} ></iframe>
     </>
   );
 }

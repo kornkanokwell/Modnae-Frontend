@@ -27,7 +27,7 @@
 }
 .set-iframe {
   width: 800px;
-  height: 1000px;
+  height: 100%;
 }
 @media screen and (max-width: 850px) {
   .top-iframe {
@@ -37,6 +37,8 @@
     width: 100vw;
   }
   .set-iframe {
+    display: flex;
+    justify-content: center;
     width: 80vw;
     height: 100px;
   }
