@@ -9,7 +9,7 @@ export function PDFViewer({ initialSrc }) {
 
   return (
     <>
-      <iframe src={src} ></iframe>
+      <iframe src={src} style={{ position: "absolute" }}></iframe>
     </>
   );
 }
