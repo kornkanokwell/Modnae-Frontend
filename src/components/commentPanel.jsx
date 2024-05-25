@@ -171,7 +171,7 @@ export function CommentPanel() {
                           fill="none"
                           viewBox="0 0 24 24"
                           strokeWidth={1.5}
-                          stroke="currentColor"
+                          stroke="#151515"
                           className="w2h2"
                         >
                           <path
@@ -192,7 +192,7 @@ export function CommentPanel() {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      fill="currentColor"
+                      fill="#151515"
                       class="comment-btn-icon w13h13"
                     >
                       <path
