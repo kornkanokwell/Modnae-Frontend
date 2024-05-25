@@ -36,6 +36,8 @@
 .modProfile-big {
   width: 7rem;
   height: 7rem;
+  border: 100%;
+  border: 2px solid #fbfff4;
 }
 .right-info-wrapper {
   margin-top: 2rem;

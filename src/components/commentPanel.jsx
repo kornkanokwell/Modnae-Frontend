@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../app/topic.css";
 import moderr from "../assets/moderror.png";
 import modnoi from "../assets/mod.png";
+import modcurious from "../assets/songsaii.png";
+import modguru from "../assets/guru.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -133,7 +135,7 @@ export function CommentPanel() {
               <div>
                 <div className="flex-row center flex-between mb-05">
                   <div className="flex-row center ">
-                    <img src={modnoi} className="modProfile" />
+                    <img src={modcurious} className="modProfile" />
                     <p className="ml-05">มดสงสัย</p>
                     <p className="text-sm text-gray">
                       •{" "}
@@ -212,7 +214,7 @@ export function CommentPanel() {
                         <div className="mb-1">
                           <div className="flex-row flex-between center p-0 m-0 mt-1">
                             <div className="flex-row center">
-                              <img src={modnoi} className="modProfile" />
+                              <img src={modguru} className="modProfile" />
                               <div>
                                 <p className="ml-05">
                                   ความคิดเห็นที่ {commentIndex + 1}
@@ -234,7 +236,7 @@ export function CommentPanel() {
                       <form onSubmit={(e) => submitComment(e, topic._id)}>
                         <div>
                           <div className="flex-row ">
-                            <img src={modnoi} className="modProfile" />
+                            <img src={modguru} className="modProfile" />
                             <div>
                               <label className="ml-05">แสดงความคิดเห็น</label>
                             </div>
