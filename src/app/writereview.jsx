@@ -21,31 +21,13 @@ export function WriteReview() {
 
   function handleChange(evt) {
     const { name, value } = evt.target;
-    if (name !== "teacher") {
-      setInput((prevInput) => {
-        return {
-          ...prevInput,
-          [name]: value,
-        };
-      });
-    }
-    if (name === "teacher" && value === "none") {
-      setInput((prevInput) => {
-        return {
-          ...prevInput,
-          teacher: "",
-        };
-      });
-    } else {
-      setInput((prevInput) => {
-        return {
-          ...prevInput,
-          teacher: value,
-        };
-      });
-    }
+    setInput((prevInput) => {
+      return {
+        ...prevInput,
+        [name]: value,
+      };
+    });
   }
-
   useEffect(() => {
     handleChange({ target: { name: "subject", value: selectedSubject } });
   }, [selectedSubject]);
@@ -133,26 +115,20 @@ export function WriteReview() {
                       <option value="none" selected disabled hidden>
                         กรุณาระบุผู้สอน
                       </option>
-                      <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
+                      <option value={input.teacher}>
                         ผศ.ดร.วิบูลศักดิ์ วัฒายุ
                       </option>
-                      <option value="ดร.ศุวิล ชมชัยยา">ดร.ศุวิล ชมชัยยา</option>
-                      <option value="รศ.ชูเกียรติ วรสุชีพ">
+                      <option vvalue={input.teacher}>ดร.ศุวิล ชมชัยยา</option>
+                      <option value={input.teacher}>
                         รศ.ชูเกียรติ วรสุชีพ
                       </option>
-                      <option value="ดร.วรินทร์ วัฒนพรพรหม">
+                      <option value={input.teacher}>
                         ดร.วรินทร์ วัฒนพรพรหม
                       </option>
-                      <option value="ดร.ปริเวท วรรณโกวิท">
-                        ดร.ปริเวท วรรณโกวิท
-                      </option>
-                      <option value="ดร.วิธวินท์ สุสุทธิ">
-                        ดร.วิธวินท์ สุสุทธิ
-                      </option>
-                      <option value="ดร.ฐิตาภรณ์ กนกรัตน">
-                        ดร.ฐิตาภรณ์ กนกรัตน
-                      </option>
-                      <option value="Dummy teacher">Dummy teacher</option>
+                      <option value={input.teacher}>ดร.ปริเวท วรรณโกวิท</option>
+                      <option value={input.teacher}>ดร.วิธวินท์ สุสุทธิ</option>
+                      <option value={input.teacher}>ดร.ฐิตาภรณ์ กนกรัตน</option>
+                      <option value={input.teacher}>Dummy teacher</option>
                     </select>
                   </span>
                 </p>
