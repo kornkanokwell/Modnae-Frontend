@@ -41,7 +41,7 @@ export const TopicPanel = () => {
   }
 
   function handleClick(event) {
-    e.preventDefault();
+    event.preventDefault();
     if (!user.email) {
       alert("กรุณาเข้าสู่ระบบ");
       navigate("/login");
