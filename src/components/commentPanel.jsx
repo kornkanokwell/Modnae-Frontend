@@ -151,7 +151,7 @@ export function CommentPanel() {
                   <p className="mb-1">{topic.descriptions}</p>
                 </div>
                 <div className="flex-row gap-3">
-                  <button className="flex-row comment-btn">
+                  <button className="flex-row comment-btn-like">
                     <div
                       className="center"
                       onClick={() => handleLike(topic._id)}

@@ -144,6 +144,15 @@
   align-items: center;
   cursor: pointer;
 }
+.comment-btn-like {
+  display: flex;
+  background-color: transparent;
+  border-color: none;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
 .comment-btn-icon:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
