@@ -54,6 +54,7 @@ export const TopicPanel = () => {
         })
         .then((response) => {
           console.log(response);
+          window.location.href = "/topic";
         })
         .catch((error) => {
           console.error(error);
