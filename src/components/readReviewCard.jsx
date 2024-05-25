@@ -134,7 +134,7 @@ function ReviewCard({
       ) : (
         <div className="review-container">
           <div className="row between">
-            <div className="m0-p0 like-std">
+            <div className="m0-p0 ">
               <div className=" center flex-row">
                 <div className="m0-p0" onClick={handleLike}>
                   {likedByUser ? (
