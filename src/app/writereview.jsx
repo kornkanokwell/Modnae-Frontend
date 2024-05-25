@@ -21,13 +21,31 @@ export function WriteReview() {
 
   function handleChange(evt) {
     const { name, value } = evt.target;
-    setInput((prevInput) => {
-      return {
-        ...prevInput,
-        [name]: value,
-      };
-    });
+    if (name !== "teacher") {
+      setInput((prevInput) => {
+        return {
+          ...prevInput,
+          [name]: value,
+        };
+      });
+    }
+    if (name === "teacher" && value === "none") {
+      setInput((prevInput) => {
+        return {
+          ...prevInput,
+          teacher: "",
+        };
+      });
+    } else {
+      setInput((prevInput) => {
+        return {
+          ...prevInput,
+          teacher: value,
+        };
+      });
+    }
   }
+
   useEffect(() => {
     handleChange({ target: { name: "subject", value: selectedSubject } });
   }, [selectedSubject]);
