@@ -72,6 +72,7 @@ export function CommentPanel() {
   };
 
   const submitComment = async (e, topicId) => {
+    e.preventDefault();
     const commentContent = e.target.comment.value;
     if (!user.email) {
       alert("กรุณาเข้าสู่ระบบ");
@@ -87,6 +88,7 @@ export function CommentPanel() {
       );
 
       setComments([...comments, response.data.comments[0]]);
+      document.getElementById('user_input').value = '';
     } catch (error) {
       console.error("Error adding comment:", error);
     }
@@ -232,6 +234,7 @@ export function CommentPanel() {
                             placeholder="แสดงความคิดเห็น"
                             className="comment-field"
                             name="comment"
+                            id=”user_input”
                           />
 
                           <button type="submit" className="send-comment-btn">
