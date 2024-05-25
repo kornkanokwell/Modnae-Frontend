@@ -59,7 +59,8 @@ export const Account = () => {
             <div className="h-100">
               <div className="info-wrapper">
                 <img src={mod} alt="" className="modProfile-big" />
-                <p>{user.username}</p>
+                <p className="mb-05 mt-1">รหัสประจำตัว</p>
+                <h4 className="mb-05">{user.username}</h4>
               </div>
               {/* <div className="logout" onClick={logout}>
                 <svg
