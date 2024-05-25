@@ -107,7 +107,6 @@ export function WriteReview() {
                     <select
                       className="subject-name"
                       name="teacher"
-                      value={input.teacher}
                       onChange={handleChange}
                       required
                       defaultChecked=""
@@ -115,14 +114,20 @@ export function WriteReview() {
                       <option value="none" selected disabled hidden>
                         กรุณาระบุผู้สอน
                       </option>
-                      <option value={teacher}>ผศ.ดร.วิบูลศักดิ์ วัฒายุ</option>
-                      <option vvalue={teacher}>ดร.ศุวิล ชมชัยยา</option>
-                      <option value={teacher}>รศ.ชูเกียรติ วรสุชีพ</option>
-                      <option value={teacher}>ดร.วรินทร์ วัฒนพรพรหม</option>
-                      <option value={teacher}>ดร.ปริเวท วรรณโกวิท</option>
-                      <option value={teacher}>ดร.วิธวินท์ สุสุทธิ</option>
-                      <option value={teacher}>ดร.ฐิตาภรณ์ กนกรัตน</option>
-                      <option value={teacher}>Dummy teacher</option>
+                      <option value={input.teacher}>
+                        ผศ.ดร.วิบูลศักดิ์ วัฒายุ
+                      </option>
+                      <option value={input.teacher}>ดร.ศุวิล ชมชัยยา</option>
+                      <option value={input.teacher}>
+                        รศ.ชูเกียรติ วรสุชีพ
+                      </option>
+                      <option value={input.teacher}>
+                        ดร.วรินทร์ วัฒนพรพรหม
+                      </option>
+                      <option value={input.teacher}>ดร.ปริเวท วรรณโกวิท</option>
+                      <option value={input.teacher}>ดร.วิธวินท์ สุสุทธิ</option>
+                      <option value={input.teacher}>ดร.ฐิตาภรณ์ กนกรัตน</option>
+                      <option value={input.teacher}>Dummy teacher</option>
                     </select>
                   </span>
                 </p>
