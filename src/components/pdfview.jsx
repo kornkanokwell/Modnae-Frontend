@@ -9,7 +9,7 @@ export function PDFViewer({ initialSrc }) {
 
   return (
     <>
-      <iframe src={src} width="100%" height="900px"></iframe>
+      <iframe src={src} width="90%" height="100%"></iframe>
     </>
   );
 }
