@@ -95,7 +95,7 @@ export function WriteReview() {
                 <p>
                   <b>อาจารย์ผู้สอน </b>
                   <span>
-                    <input
+                    {/* <input
                       type="text"
                       className="subject-name"
                       placeholder="กรุณาระบุผู้สอน"
@@ -103,19 +103,39 @@ export function WriteReview() {
                       onChange={handleChange}
                       value={input.teacher}
                       required
-                    />
-                    {/* <select className="subject-name" defaultChecked="">
-                    <option value="none" selected disabled hidden>
-                      กรุณาระบุผู้สอน
-                    </option>
-                    <option>ผศ.ดร.วิบูลศักดิ์ วัฒายุ</option>
-                    <option>ดร.ศุวิล ชมชัยยา</option>
-                    <option>รศ.ชูเกียรติ วรสุชีพ</option>
-                    <option>ดร.วรินทร์ วัฒนพรพรหม</option>
-                    <option>ดร.ปริเวท วรรณโกวิท</option>
-                    <option>ดร.วิธวินท์ สุสุทธิ</option>
-                    <option>ดร.ฐิตาภรณ์ กนกรัตน</option>
-                  </select> */}
+                    /> */}
+                    <select
+                      className="subject-name"
+                      name="teacher"
+                      onChange={handleChange}
+                      value={input.teacher}
+                      required
+                      defaultChecked=""
+                    >
+                      <option value="none" selected disabled hidden>
+                        กรุณาระบุผู้สอน
+                      </option>
+                      <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
+                        ผศ.ดร.วิบูลศักดิ์ วัฒายุ
+                      </option>
+                      <option value="ดร.ศุวิล ชมชัยยา">ดร.ศุวิล ชมชัยยา</option>
+                      <option value="รศ.ชูเกียรติ วรสุชีพ">
+                        รศ.ชูเกียรติ วรสุชีพ
+                      </option>
+                      <option value="ดร.วรินทร์ วัฒนพรพรหม">
+                        ดร.วรินทร์ วัฒนพรพรหม
+                      </option>
+                      <option value="ดร.ปริเวท วรรณโกวิท">
+                        ดร.ปริเวท วรรณโกวิท
+                      </option>
+                      <option value="ดร.วิธวินท์ สุสุทธิ">
+                        ดร.วิธวินท์ สุสุทธิ
+                      </option>
+                      <option value="ดร.ฐิตาภรณ์ กนกรัตน">
+                        ดร.ฐิตาภรณ์ กนกรัตน
+                      </option>
+                      <option value="Dummy teacher">Dummy teacher</option>
+                    </select>
                   </span>
                 </p>
                 <p>
