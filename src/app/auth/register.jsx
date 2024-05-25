@@ -162,7 +162,7 @@ export function Register() {
                 />
               </div>
 
-              <p className="p0-m0">{log}</p>
+              <p className="p0-m0 red">{log}</p>
               <button className="loginButton">สร้างบัญชี</button>
               <p>
                 มีบัญชีอยู่แล้ว?{" "}

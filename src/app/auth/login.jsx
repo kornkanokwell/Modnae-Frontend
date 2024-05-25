@@ -103,7 +103,7 @@ export function Login() {
                 />
               </div>
 
-              <p>{log}</p>
+              <p className="red">{log}</p>
               <button className="loginButton">เข้าสู่ระบบ</button>
               <p>
                 ยังไม่มีบัญชี?{" "}
