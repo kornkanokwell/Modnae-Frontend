@@ -61,7 +61,7 @@ export const Account = () => {
                 <img src={mod} alt="" className="modProfile-big" />
                 <p>{user.username}</p>
               </div>
-              <div className="logout" onClick={logout}>
+              {/* <div className="logout" onClick={logout}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -78,7 +78,7 @@ export const Account = () => {
                 </svg>
 
                 <Link className="logout-btn">ออกจากระบบ</Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="flex-col right-info">
