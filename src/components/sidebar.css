@@ -7,7 +7,7 @@
   background-color: #81bfa1;
   display: flex;
   flex-direction: column;
-  border-radius: 1rem 1rem 0rem 0rem;
+  border-radius: 1rem 1rem;
   padding: 0;
   margin: 0.7rem 0 0.7rem 0.7rem;
 }
@@ -197,7 +197,7 @@
   }
   .sidenav {
     display: none;
-    height: 100%;
+    height: 50%;
     padding: 0;
     margin: 0.7rem 0 0.7rem 0.7rem;
   }
