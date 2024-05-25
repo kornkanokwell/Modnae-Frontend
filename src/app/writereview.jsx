@@ -111,9 +111,6 @@ export function WriteReview() {
                       value={input.teacher}
                       required
                     >
-                      <option value="none" selected disabled hidden>
-                        กรุณาระบุผู้สอน
-                      </option>
                       <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
                         ผศ.ดร.วิบูลศักดิ์ วัฒายุ
                       </option>
