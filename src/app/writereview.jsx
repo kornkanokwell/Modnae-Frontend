@@ -110,7 +110,7 @@ export function WriteReview() {
                       onChange={handleChange}
                       value={input.teacher}
                       required
-                      defaultChecked="Dummy teacher"
+                      placeholder="กรุณาระบุผู้สอน"
                     >
                       <option value="Dummy teacher">Dummy teacher</option>
                       <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
