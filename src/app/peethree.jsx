@@ -11,7 +11,7 @@ export function PeeThree() {
       <div className="syllabus-center">
         <div className="syllabus-response">
           <div className="syllabus-header">
-            <h1>วิชาเรียน ปี 2</h1>
+            <h1>วิชาเรียน ปี 3</h1>
             <hr />
           </div>
           <div className="syllabus-content">
