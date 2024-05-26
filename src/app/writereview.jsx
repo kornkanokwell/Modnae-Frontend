@@ -85,7 +85,7 @@ export function WriteReview() {
                     <input
                       name="year"
                       className="subject-name"
-                      placeholder="ระบุปีการศึกษา"
+                      placeholder="ระบุปีการศึกษา (256X)"
                       onChange={handleChange}
                       value={input.year}
                       required
