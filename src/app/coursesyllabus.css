@@ -3,6 +3,7 @@
   height: 600px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .pee-one {
@@ -56,5 +57,6 @@
   }
   .allcontent-course-course {
     margin-top: 2rem;
+    align-items: normal;
   }
 }
