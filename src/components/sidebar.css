@@ -11,7 +11,11 @@
   padding: 0;
   margin: 0.7rem 0 0.7rem 0.7rem;
 }
-
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
 .side-w-btn {
   position: relative;
   display: flex;
@@ -190,11 +194,6 @@
 }
 
 @media screen and (max-width: 720px) {
-  .sidebar {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
   .sidenav {
     display: none;
     height: 80%;
