@@ -82,7 +82,7 @@ export function Login() {
                   type="email"
                   name="email"
                   onChange={handleChange}
-                  placeholder="email@mail.kmutt.ac.th"
+                  placeholder="email@kmutt.ac.th"
                 />
               </div>
 
