@@ -53,7 +53,9 @@ export function Login() {
       .catch((error) => {
         if (error.response && error.response.data === "Password invalid") {
           setLog("รหัสผ่านไม่ถูกต้อง");
-        } else {
+        } else if(error.response && error.response.data === "User not found") {
+          setLog("ไม่พบบัญชีผู้ใช้");
+        }else{
           setLog("กรุณายืนยันตัวตน");
         }
       });
