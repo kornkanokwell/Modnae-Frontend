@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function RateOurWebsite() {
   return (
     <main className="rate-wrapper">
-      <Link to="/rate">
+      <Link to="/rateourwebsite">
         <div className="rate-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

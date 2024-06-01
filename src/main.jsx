@@ -99,7 +99,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/account" element={<Account />} />
         <Route path="/users/:id/verify/:tokens" element={<EmailVerify />} />
-        <Route path="/rate" element={<Googleform />} />
+        <Route path="/rateourwebsite" element={<Googleform />} />
       </Routes>
     </>
   );

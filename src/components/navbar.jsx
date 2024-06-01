@@ -112,7 +112,7 @@ export function Navbar() {
 
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/writereview" className="nav-link">
+              <Link to="/login" className="nav-link">
                 เขียนรีวิว
               </Link>
             </li>
