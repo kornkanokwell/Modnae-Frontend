@@ -21,14 +21,20 @@ function ReviewCard({
   const [likedByUser, setLikedByUser] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    axios
-      .get(
-        `https://modnae-m7lm.onrender.com/Readreview/like-status/${reviewId}?email=${userEmail}`
-      )
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://modnae-m7lm.onrender.com/Readreview/like-status/${reviewId}?email=${userEmail}`
+        );
         setLikedByUser(response.data.likedByUser);
-      })
-      .catch((error) => console.error("Error fetching like status:", error));
+      } catch (error) {
+        console.error("Error fetching like status:", error);
+      }
+    };
+
+    if (reviewId && userEmail) {
+      fetchData();
+    }
   }, [reviewId, userEmail]);
 
   const handleLike = () => {
