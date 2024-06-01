@@ -25,7 +25,7 @@ export const TopicPanel = () => {
     title: "",
     description: "",
   });
-  console.log(user);
+  // console.log(user);
   function handleChange(evt) {
     const { name, value } = evt.target;
 
@@ -53,7 +53,7 @@ export const TopicPanel = () => {
           descriptions: input.description,
         })
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           window.location.href = "/topic";
         })
         .catch((error) => {
