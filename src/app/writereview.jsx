@@ -5,9 +5,12 @@ import { Navbar } from "../components/navbar";
 import { Sidenav } from "../components/sidebar";
 import "./writereview.css";
 import "../components/sendBtn.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useSelector } from "react-redux";
 const getUser = (state) => ({ ...state.user });
+toast.configure();
 export function WriteReview() {
   const user = useSelector(getUser);
   const navigate = useNavigate();
@@ -18,7 +21,12 @@ export function WriteReview() {
     teacher: "",
     descriptions: "",
   });
-
+  // function which is called when
+  // button is clicked
+  const notify = () => {
+    // Calling toast method by passing string
+    toast("โพสต์รีวิวสำเร็จ");
+  };
   function handleChange(evt) {
     const { name, value } = evt.target;
     setInput((prevInput) => {
@@ -49,6 +57,7 @@ export function WriteReview() {
       })
       .then((response) => {
         window.location.href = "/readreview";
+        notify();
         console.log(response.data);
       })
       .catch((error) => {
@@ -111,7 +120,9 @@ export function WriteReview() {
                       value={input.teacher}
                       required
                     >
-                      <option disabled selected value="">กรุณาระบุผู้สอน</option>
+                      <option disabled selected value="">
+                        กรุณาระบุผู้สอน
+                      </option>
                       <option value="Dummy teacher">Dummy teacher</option>
                       <option value="ผศ.ดร.วิบูลศักดิ์ วัฒายุ">
                         ผศ.ดร.วิบูลศักดิ์ วัฒายุ
