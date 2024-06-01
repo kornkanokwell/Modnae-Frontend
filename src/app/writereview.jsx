@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useSelector } from "react-redux";
 const getUser = (state) => ({ ...state.user });
-toast.configure();
 export function WriteReview() {
   const user = useSelector(getUser);
   const navigate = useNavigate();
