@@ -28,7 +28,7 @@ export const Account = () => {
         })
         .then((response) => {
           setLog("เปลี่ยนรหัสผ่านสำเร็จ");
-          console.log(response.data);
+          // console.log(response.data);
         })
         .catch((error) => {
           if (error.response && error.response.data === "Password invalid") {

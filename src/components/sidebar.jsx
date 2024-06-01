@@ -259,7 +259,7 @@ export function Sidenav({ onSelectSubject }) {
 
   const handleSearchClick = () => {
     setView("search");
-    console.log(searchSubject);
+    // console.log(searchSubject);
     handleSearch();
   };
 
@@ -272,7 +272,7 @@ export function Sidenav({ onSelectSubject }) {
       .post("https://modnae-m7lm.onrender.com/Search", { searchSubject })
       .then((response) => {
         setResultSearch(response.data);
-        console.log(resultSearch);
+        // console.log(resultSearch);
       })
       .catch((error) => {
         console.error(error);

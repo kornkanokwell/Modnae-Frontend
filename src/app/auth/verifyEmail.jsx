@@ -12,7 +12,7 @@ export function EmailVerify() {
       try {
         const url = `https://modnae-m7lm.onrender.com/api/users/${params.id}/verify/${params.tokens}`;
         const { data } = await axios.get(url);
-        console.log(data);
+        // console.log(data);
         setValidUrl(true);
       } catch (err) {
         console.log(err);

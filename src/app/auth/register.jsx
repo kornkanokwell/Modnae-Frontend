@@ -49,7 +49,7 @@ export function Register() {
       axios
         .post("https://modnae-m7lm.onrender.com/api/register", value)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           setLog("กรุณาตรวจสอบกล่องจดหมายเข้าในอีเมลของคุณ");
         })
         .catch((error) => {

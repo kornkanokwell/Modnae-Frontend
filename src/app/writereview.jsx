@@ -58,7 +58,7 @@ export function WriteReview() {
       .then((response) => {
         window.location.href = "/readreview";
         notify();
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch((error) => {
         console.error(error);
