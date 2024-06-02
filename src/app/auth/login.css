@@ -173,6 +173,9 @@ body {
 .red {
   color: #880808;
 }
+.hide-icon {
+  display: none;
+}
 @media screen and (max-width: 767px) {
   .loginPicture,
   .registerPicture {
@@ -195,7 +198,6 @@ body {
   }
   .loginContent {
     background-color: white;
-    margin-top: 100px;
     width: 90%;
     height: 500px;
     display: flex;
@@ -205,7 +207,6 @@ body {
 
   .loginContentRegister {
     background-color: white;
-    margin-top: 100px;
     width: 90%;
     display: flex;
     border-radius: 10px;
@@ -218,7 +219,7 @@ body {
     padding: 10px 40px;
     font-size: 16px;
     transition: border-color 0.3s;
-    width: 60%;
+    width: auto;
   }
   .inputContainer {
     margin: 0 20px 25px 20px;
@@ -252,11 +253,22 @@ body {
   }
   .inputName {
     transition: border-color 0.3s;
-    width: 60%;
+    width: auto;
   }
   .inputLast {
     transition: border-color 0.3s;
-    width: 60%;
+    width: auto;
     padding: 10px 40px;
+  }
+  .hide-icon {
+    display: block;
+  }
+  .inputIconUser-last {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 15px;
   }
 }
