@@ -219,14 +219,15 @@ export function CommentPanel() {
                                 <p className="ml-05">
                                   ความคิดเห็นที่ {commentIndex + 1}
                                 </p>
+                                <p className="text-sm text-gray">
+                                  •{" "}
+                                  {new Date(topic.createdAt).toLocaleDateString(
+                                    "th-TH",
+                                    thaiDateTimeOptions
+                                  )}
+                                </p>
                               </div>
                             </div>
-                            <p className="text-sm text-gray">
-                              {new Date(comment.createdAt).toLocaleDateString(
-                                "th-TH",
-                                thaiDateTimeOptions
-                              )}
-                            </p>
                           </div>
                           <p className="bubble-comment">{comment.content}</p>
                         </div>
