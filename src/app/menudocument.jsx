@@ -3,7 +3,7 @@ import { Navbar } from "../components/navbar";
 import "./menudocument.css";
 import { Link } from "react-router-dom";
 import { RateOurWebsite } from "../components/rateOurWebsite";
-
+import { AddLine } from "../components/AddLine";
 export function MenuDocument() {
   return (
     <>
@@ -32,6 +32,7 @@ export function MenuDocument() {
           <RateOurWebsite />
         </div>
       </main>
+      <AddLine />
     </>
   );
 }

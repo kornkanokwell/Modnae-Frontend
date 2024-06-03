@@ -1,0 +1,13 @@
+.addline-container {
+  position: relative;
+}
+.AddlineButton {
+  position: fixed;
+  right: 2px;
+  bottom: 2px;
+  transition: 0.2s;
+}
+.AddlineButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
