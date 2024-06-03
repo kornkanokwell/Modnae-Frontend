@@ -29,6 +29,14 @@ export function Login() {
       ...value,
       [e.target.name]: e.target.value,
     });
+
+    if (e.target.name === "password") {
+      if (e.target.value.length < 8) {
+        setLog("รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร");
+      } else {
+        setLog(""); // Clear error message
+      }
+    }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,9 +61,9 @@ export function Login() {
       .catch((error) => {
         if (error.response && error.response.data === "Password invalid") {
           setLog("รหัสผ่านไม่ถูกต้อง");
-        } else if(error.response && error.response.data === "User not found") {
+        } else if (error.response && error.response.data === "User not found") {
           setLog("ไม่พบบัญชีผู้ใช้");
-        }else{
+        } else {
           setLog("กรุณายืนยันตัวตน");
         }
       });

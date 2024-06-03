@@ -33,6 +33,13 @@ export function Register() {
       setLog(""); // Clear error message
       setIsKmutt(true);
     }
+    if (e.target.name === 'password') {
+      if (e.target.value.length < 8) {
+        setLog("รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร");
+      } else {
+        setLog(""); // Clear error message
+      }
+    }
   };
 
   const handleSubmit = (e) => {
