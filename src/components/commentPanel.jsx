@@ -215,7 +215,7 @@ export function CommentPanel() {
                           <div className="flex-row flex-between center p-0 m-0 mt-1">
                             <div className="flex-row center">
                               <img src={modguru} className="modProfile" />
-                              <div>
+                              <div className="flex-row center">
                                 <p className="ml-05">
                                   ความคิดเห็นที่ {commentIndex + 1}
                                 </p>
