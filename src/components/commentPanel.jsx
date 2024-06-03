@@ -221,7 +221,9 @@ export function CommentPanel() {
                                 </p>
                                 <p className="text-sm text-gray">
                                   •{" "}
-                                  {new Date(topic.createdAt).toLocaleDateString(
+                                  {new Date(
+                                    comment.createdAt
+                                  ).toLocaleDateString(
                                     "th-TH",
                                     thaiDateTimeOptions
                                   )}
