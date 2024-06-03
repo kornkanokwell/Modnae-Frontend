@@ -50,9 +50,7 @@ export const Account = () => {
   // console.log("account user", user);
   return (
     <>
-      <nav>
-        <Navbar />
-      </nav>
+      <Navbar />
       <main className="account-wrapper">
         <div className="account-container row">
           {/* <div className="left-info">

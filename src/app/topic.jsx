@@ -7,9 +7,7 @@ import { TopicPanel } from "../components/topicPanel";
 export function Topic() {
   return (
     <>
-      <nav>
-        <Navbar />
-      </nav>
+      <Navbar />
       <main className="content-wrapper">
         <div className=" topic-wrapper">
           <section id="section1" className="topic-header">
