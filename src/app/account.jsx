@@ -104,7 +104,7 @@ export const Account = () => {
                   <label>รหัสผ่านเก่า</label>
                   <input
                     type="password"
-                    placeholder="เปลี่ยนรหัสผ่าน"
+                    placeholder="รหัสผ่านเก่า"
                     className="text-info-input"
                     name="current_password"
                   />
@@ -113,7 +113,7 @@ export const Account = () => {
                   <label>รหัสผ่านใหม่</label>
                   <input
                     type="password"
-                    placeholder="เปลี่ยนรหัสผ่าน"
+                    placeholder="รหัสผ่านใหม่"
                     className="text-info-input"
                     name="new_password"
                   />
@@ -122,7 +122,7 @@ export const Account = () => {
                   <label>ยืนยันรหัสผ่าน</label>
                   <input
                     type="password"
-                    placeholder="เปลี่ยนรหัสผ่าน"
+                    placeholder="ยืนยันรหัสผ่าน"
                     className="text-info-input"
                     name="confirm_password"
                   />

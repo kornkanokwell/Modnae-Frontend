@@ -228,7 +228,7 @@ export function CommentPanel() {
                               )}
                             </p>
                           </div>
-                          <p className="ml-3">{comment.content}</p>
+                          <p className="bubble-comment">{comment.content}</p>
                         </div>
                       </div>
                     ))}

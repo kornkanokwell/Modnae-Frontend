@@ -171,7 +171,13 @@
   font-size: 15px;
   resize: none;
 }
-
+.bubble-comment {
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 10px;
+  background-color: #ffffff;
+  margin: 0 0 0 3rem;
+}
 .send-comment-btn {
   padding: 0.5rem;
   border: none;
