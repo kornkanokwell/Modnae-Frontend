@@ -35,6 +35,8 @@ export const Account = () => {
             setLog("รหัสผ่านเก่าไม่ถูกต้อง");
           }
         });
+    } else if (pass_new.length < 8) {
+      setLog("รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร");
     } else if (pass_new != e.target.elements["confirm_password"].value) {
       setLog("รหัสผ่านใหม่ไม่ตรงกัน");
     }
