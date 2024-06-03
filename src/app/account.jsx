@@ -107,6 +107,7 @@ export const Account = () => {
                     placeholder="รหัสผ่านเก่า"
                     className="text-info-input"
                     name="current_password"
+                    required
                   />
                 </div>
                 <div className="flex-col text-field">
@@ -116,6 +117,7 @@ export const Account = () => {
                     placeholder="รหัสผ่านใหม่"
                     className="text-info-input"
                     name="new_password"
+                    required
                   />
                 </div>
                 <div className="flex-col text-field">
@@ -125,6 +127,7 @@ export const Account = () => {
                     placeholder="ยืนยันรหัสผ่าน"
                     className="text-info-input"
                     name="confirm_password"
+                    required
                   />
                 </div>
                 <p className="p0-m0 red">{log}</p>
