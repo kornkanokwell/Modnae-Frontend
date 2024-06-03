@@ -123,14 +123,14 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    border-radius: 0.7rem 0.7rem 0 0;
+    border-radius: 0.7rem;
     padding: 0 2em;
   }
   .right-info {
     width: 90%;
     height: 100%;
     background-color: #fff7dc;
-    border-radius: 0 0 0.7rem 0.7rem;
+    border-radius: 0.7rem;
     padding: 0 2em;
     margin: 0;
   }
