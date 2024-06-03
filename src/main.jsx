@@ -98,7 +98,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/users/:id/verify/:tokens" element={<EmailVerify />} />
+        <Route path="/api/users/:id/verify/:tokens" element={<EmailVerify />} />
         <Route path="/rateourwebsite" element={<Googleform />} />
       </Routes>
     </>
