@@ -84,10 +84,16 @@ export const Account = () => {
           </div> */}
           <div className="flex-col right-info">
             <div className="right-info-wrapper">
-              <h3>ตั้งค่าบัญชี</h3>
-              <div className="flex-col text-field">
-                <label>รหัสประจำตัว</label>
-                <p className="text-info ">{user.username}</p>
+              <h2>ตั้งค่าบัญชี</h2>
+              <div className="row gap-5 text-field">
+                <div className="flex-col w-full">
+                  <label>รหัสประจำตัว</label>
+                  <p className="text-info ">{user.username}</p>
+                </div>
+                <div className="flex-col w-full">
+                  <label>อีเมล</label>
+                  <p className="text-info ">{user.email}</p>
+                </div>
               </div>
               <div className="row gap-5 text-field">
                 <div className="flex-col w-full">
@@ -98,10 +104,6 @@ export const Account = () => {
                   <label>นามสกุล</label>
                   <p className="text-info">{user.lastname}</p>
                 </div>
-              </div>
-              <div className="flex-col text-field">
-                <label>อีเมล</label>
-                <p className="text-info ">{user.email}</p>
               </div>
               <form onSubmit={HandleSubmit}>
                 <div className="flex-col text-field">

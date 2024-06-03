@@ -73,7 +73,8 @@
 }
 .text-field {
   width: auto;
-  padding: 0 5rem 0 0;
+  /* padding: 0 5rem 0 0; */
+  padding: 0;
 }
 .logout:hover {
   background-color: #385f4c;
@@ -128,7 +129,7 @@
   .right-info {
     width: 90%;
     height: 100%;
-    background-color: #fbfff4;
+    background-color: #fff7dc;
     border-radius: 0 0 0.7rem 0.7rem;
     padding: 0 2em;
     margin: 0;
@@ -148,7 +149,8 @@
   }
   .text-field {
     width: auto;
-    padding: 0 1rem 0 0;
+    /* padding: 0 1rem 0 0; */
+    padding: 0;
   }
   .text-info {
     background-color: #d9d9d9;
