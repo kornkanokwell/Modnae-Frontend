@@ -55,7 +55,7 @@ export const Account = () => {
       </nav>
       <main className="account-wrapper">
         <div className="account-container row">
-          <div className="left-info">
+          {/* <div className="left-info">
             <div className="h-100">
               <div className="info-wrapper">
                 <img src={mod} alt="" className="modProfile-big" />
@@ -79,12 +79,16 @@ export const Account = () => {
                 </svg>
 
                 <Link className="logout-btn">ออกจากระบบ</Link>
-              </div> */}
+              </div> 
             </div>
-          </div>
+          </div> */}
           <div className="flex-col right-info">
             <div className="right-info-wrapper">
               <h3>ตั้งค่าบัญชี</h3>
+              <div className="flex-col text-field">
+                <label>รหัสประจำตัว</label>
+                <p className="text-info ">{user.username}</p>
+              </div>
               <div className="row gap-5 text-field">
                 <div className="flex-col w-full">
                   <label>ชื่อจริง</label>
