@@ -251,6 +251,7 @@ export function CommentPanel() {
                               className="comment-field"
                               name="comment"
                               id="user_input"
+                              required
                             />
 
                             <button type="submit" className="send-comment-btn">
