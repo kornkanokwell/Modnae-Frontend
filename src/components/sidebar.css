@@ -1,6 +1,6 @@
 .sidenav {
   position: sticky;
-  top: 0;
+  top: 70px;
   height: 100vh;
   width: 18rem;
   scrollbar-color: #3d6546 #81bfa1;
@@ -183,6 +183,8 @@
   text-align: center;
 }
 .hide-btn {
+  position: sticky;
+  top: 100px;
   z-index: 1;
   display: block;
   height: 70px;
