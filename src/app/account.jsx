@@ -10,6 +10,7 @@ import axios from "axios";
 const getUser = (state) => ({ ...state.user });
 import "./coursesyllabus.css";
 import "./account.css";
+import api from "../axiosInstance";
 export const Account = () => {
   const user = useSelector(getUser);
   const dispatch = useDispatch();
@@ -20,8 +21,8 @@ export const Account = () => {
     let currpass = e.target.elements["current_password"].value;
     let pass_new = e.target.elements["new_password"].value;
     if (pass_new === e.target.elements["confirm_password"].value) {
-      axios
-        .post("https://modnae-m7lm.onrender.com/api/updateUser", {
+      await api
+        .post("/api/updateUser", {
           email: user.email,
           password: currpass,
           newpassword: pass_new,

@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import api from "../axiosInstance";
 const getUser = (state) => ({ ...state.user });
 export function WriteReview() {
   const user = useSelector(getUser);
@@ -46,8 +47,8 @@ export function WriteReview() {
   function handleClick(event) {
     event.preventDefault();
 
-    axios
-      .post("https://modnae-m7lm.onrender.com/WriteReview", {
+    api
+      .post("/api/WriteReview", {
         email: user.email,
         subject: input.subject,
         year: input.year,

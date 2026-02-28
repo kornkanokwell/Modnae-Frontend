@@ -5,6 +5,7 @@ import { Navbar } from "../../components/navbar";
 import "./login.css";
 import { Link } from "react-router-dom";
 import regimg from "../../assets/reg.png";
+import api from "../../axiosInstance";
 export function Register() {
   const [value, setValue] = useState({
     username: "",
@@ -35,7 +36,7 @@ export function Register() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!value.username || !value.firstname || !value.lastname) {
       setLog("กรุณากรอกข้อมูลให้ครบถ้วน");
@@ -48,8 +49,8 @@ export function Register() {
     } else if (value.password != value.Cpassword) {
       setLog("รหัสผ่านไม่ตรงกัน");
     } else {
-      axios
-        .post("https://modnae-m7lm.onrender.com/api/register", value)
+      await api
+        .post("/api/register", value)
         .then((response) => {
           // console.log(response);
           setLog("กรุณาตรวจสอบกล่องจดหมายเข้าในอีเมลของคุณ");

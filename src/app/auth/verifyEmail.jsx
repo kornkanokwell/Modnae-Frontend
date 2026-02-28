@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { LoadingToRedirect } from "../../routes/LoadingToRedirect";
 import "./verify.css";
+import api from "../../axiosInstance";
 
 export function EmailVerify() {
   const [validUrl, setValidUrl] = useState(false);
@@ -10,8 +11,8 @@ export function EmailVerify() {
   useEffect(() => {
     const verifyEmailUrl = async () => {
       try {
-        const url = `https://modnae-m7lm.onrender.com/api/users/${params.id}/verify/${params.tokens}`;
-        const { data } = await axios.get(url);
+        const url = `/api/users/${params.id}/verify/${params.tokens}`;
+        const { data } = await api.get(url);
         // console.log(data);
         setValidUrl(true);
       } catch (err) {

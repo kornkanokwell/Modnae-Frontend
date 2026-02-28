@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Navbar } from "../../components/navbar";
 import "./login.css";
 import loginimg from "../../assets/login.png";
+import api from "../../axiosInstance";
 
 export function Login() {
   const dispatch = useDispatch();
@@ -30,10 +31,10 @@ export function Login() {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("https://modnae-m7lm.onrender.com/api/login", value)
+    await api
+      .post("/api/login", value)
       .then((response) => {
         dispatch({
           type: "LOGIN",

@@ -7,6 +7,7 @@ import modguru from "../assets/guru.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import api from "../axiosInstance";
 const getUser = (state) => ({ ...state.user });
 
 export function CommentPanel() {
@@ -24,15 +25,13 @@ export function CommentPanel() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://modnae-m7lm.onrender.com/ReadTopic"
-        );
+        const response = await api.get("/api/ReadTopic");
         const reversedTopics = response.data.reverse();
         const topicsWithComments = await Promise.all(
           reversedTopics.map(async (topic) => {
             if (user.email) {
-              const likeStatusResponse = await axios.get(
-                `https://modnae-m7lm.onrender.com/Topic/like-status/${topic._id}?email=${user.email}`
+              const likeStatusResponse = await api.get(
+                `/api/Topic/like-status/${topic._id}?email=${user.email}`
               );
               return {
                 ...topic,
@@ -79,13 +78,10 @@ export function CommentPanel() {
     e.preventDefault();
     const commentContent = e.target.comment.value;
     try {
-      const response = await axios.post(
-        `https://modnae-m7lm.onrender.com/Topic/${topicId}/comment`,
-        {
-          email: user.email,
-          content: commentContent,
-        }
-      );
+      const response = await api.post(`/api/Topic/${topicId}/comment`, {
+        email: user.email,
+        content: commentContent,
+      });
 
       setComments([...comments, response.data.comments[0]]);
       window.location.href = "/topic";
@@ -100,12 +96,9 @@ export function CommentPanel() {
       navigate("/login");
     }
     try {
-      const response = await axios.post(
-        `https://modnae-m7lm.onrender.com/Topic/like/${topicId}`,
-        {
-          email: user.email,
-        }
-      );
+      const response = await api.post(`/api/Topic/like/${topicId}`, {
+        email: user.email,
+      });
 
       setTopics((prevTopics) =>
         prevTopics.map((topic) =>

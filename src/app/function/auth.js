@@ -1,7 +1,8 @@
 import axios from "axios";
+import api from "../../axiosInstance";
 
 export const currentUser = async(authtoken)=>{
-    return await axios.post("https://modnae-m7lm.onrender.com/api/current-user",
+    return await api.post("/api/current-user",
         {},
         {
             headers:{
@@ -14,7 +15,7 @@ export const currentUser = async(authtoken)=>{
 }
 
 export const currentAdmin = async(authtoken)=>{
-    return await axios.post("https://modnae-m7lm.onrender.com/api/current-admin",
+    return await api.post("/api/current-admin",
         {},
         {
             headers:{

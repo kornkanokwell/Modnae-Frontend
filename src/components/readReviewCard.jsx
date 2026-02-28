@@ -4,6 +4,7 @@ import "../app/readreview.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import api from "../axiosInstance";
 
 function ReviewCard({
   subject,
@@ -23,8 +24,8 @@ function ReviewCard({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `https://modnae-m7lm.onrender.com/Readreview/like-status/${reviewId}?email=${userEmail}`
+        const response = await api.get(
+          `/api/Readreview/like-status/${reviewId}?email=${userEmail}`
         );
         setLikedByUser(response.data.likedByUser);
       } catch (error) {
@@ -38,8 +39,8 @@ function ReviewCard({
   }, [reviewId, userEmail]);
 
   const handleLike = () => {
-    axios
-      .post(`https://modnae-m7lm.onrender.com/Readreview/like/${reviewId}`, {
+    api
+      .post(`/api/Readreview/like/${reviewId}`, {
         email: userEmail,
       })
       .then((response) => {

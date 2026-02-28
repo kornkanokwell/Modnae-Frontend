@@ -7,6 +7,7 @@ import { Sidenav } from "../components/sidebar";
 import { useSelector } from "react-redux";
 import ReviewCard from "../components/readReviewCard";
 import axios from "axios";
+import api from "../axiosInstance";
 const getUser = (state) => ({ ...state.user });
 export function ReadReview() {
   const user = useSelector(getUser);
@@ -19,8 +20,8 @@ export function ReadReview() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(
-          `https://modnae-m7lm.onrender.com/ReadReview${
+        const response = await api.get(
+          `/api/ReadReview${
             selectedSubject ? `?subject=${selectedSubject}` : ""
           }`
         );

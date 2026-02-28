@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../app/topic.css";
+import api from "../axiosInstance";
 const getUser = (state) => ({ ...state.user });
 function toggleTopic() {
   const topicBtn = document.getElementById("topic");
@@ -46,8 +47,8 @@ export const TopicPanel = () => {
       alert("กรุณาเข้าสู่ระบบ");
       navigate("/login");
     } else {
-      axios
-        .post("https://modnae-m7lm.onrender.com/Topic", {
+      api
+        .post("/api/Topic", {
           email: user.email,
           title: input.title,
           descriptions: input.description,
